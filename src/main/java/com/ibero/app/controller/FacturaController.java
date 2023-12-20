@@ -43,7 +43,8 @@ public class FacturaController {
 		
 		if(factura == null) {
 			flash.addFlashAttribute("error", "¡La factura no existe en la base de datos!");
-			return "redirect:/listar";		}
+			return "redirect:/listar";		
+			}
 		
 		model.put("factura", factura);
 		model.put("titulo", "Factura: ".concat(factura.getDescripcion()));
