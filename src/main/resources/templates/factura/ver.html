@@ -55,6 +55,15 @@
 				
 				<h5 class="float-right"> Gran Total<span th:text="${factura.total}" class="badge badge-secondary"></span></h5>
 				
+				<div class="card boder-info mb-4" style="max-width: 20rem;"> 
+					<div class="card-header">Observaciones</div>
+					<div class="card-body">
+						<p class="card-text" th:text="${factura.observacion}" th:if="${not #list.isEmpty(factura.observacion)}"></p>
+						<h4 class="card-title" th:if="${#list.isEmpty(factura.observacion)}"></h4>
+					</div>
+				</div>
+				
+				
 			</div>
 		</div>
 	</div>
